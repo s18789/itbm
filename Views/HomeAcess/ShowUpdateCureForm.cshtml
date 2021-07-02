@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var id = ViewData["cureId"];
+}
+
+<form asp-controller="HomeAcess" asp-action="UpdateCure" method="post">
+    <label for="cureId"> Id: </label>
+    <input type="text" id="cureId" name="cureId" value="@id" readonly />
+    <br />
+    <br />
+    <label for="name"> Name: </label>
+    <input type="text" id="name" name="name" />
+    <br />
+    <br />
+    <input type="submit" value="submit" />
+
+</form>
