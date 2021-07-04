@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MVCprojectOne.Models;
 using MVCprojectOne.Services.CureService;
+using MVCprojectOne.Services.DoctorService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +27,11 @@ namespace MVCprojectOne
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Data Source=(localDb)\\MSSQLLocalDb;Initial Catalog=Artisto;Integrated Security=SSPI;";
+            var connection = @"Data Source=db-mssql16.pjwstk.edu.pl; Initial Catalog=s18789;Integrated Security=True";
             services.AddDbContext<MainDbContext>(options => options.UseSqlServer(connection));
 
             services.AddScoped<ICureService, CureService>();
+            services.AddScoped<IDoctorService, DoctorService>();
             services.AddControllersWithViews();
         }
 
