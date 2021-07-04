@@ -23,7 +23,7 @@ namespace MVCprojectOne.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localDb)\\MSSQLLocalDb;Initial Catalog=Artisto;Integrated Security=SSPI;");
+            optionsBuilder.UseSqlServer("Data Source=db-mssql16.pjwstk.edu.pl; Initial Catalog=s18789;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

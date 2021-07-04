@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var doctorPersonalNumber = ViewData["doctorPersonalNumber"];
+}
+
+<partial name="_ModelsPartialView" />
+
+<form asp-controller="Doctor" asp-action="UpdateDoctor">
+    <label for="PersonalNumber">Personal Number: </label>
+    <input type="text" id="PersonalNumber" name="PersonalNumber" value="@doctorPersonalNumber" readonly />
+    <br />
+    <br />
+    <label for="FirstName"> FirstName: </label>
+    <input type="text" id="FirstName" name="FirstName" />
+    <br />
+    <br />
+    <label for="LastName"> LastName: </label>
+    <input type="text" id="LastName" name="LastName" />
+    <br />
+    <br />
+    <input type="submit" value="submit" />
+</form>
+
+

@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Doctor> doctors = (List<Doctor>)ViewData["Doctors"];
+}
+
+<partial name="_ModelsPartialView" />
+
+<div style="clear: both">
+
+</div>
+
+<table>
+    <tr>
+        <th>
+            Personal Number:
+        </th>
+        <th>
+            FirstName:
+        </th>
+        <th>
+            LastName:
+        </th>
+    </tr>
+    @foreach (Doctor doctor in doctors)
+    {
+        <tr>
+            <td>
+                @doctor.PersonalNumber
+            </td>
+            <td>
+                @doctor.FirstName
+            </td>
+            <td>
+                @doctor.LastName
+            </td>
+            <td>
+                <a href="@Url.Action("DeleteDoctor", "Doctor", new { doctorPersonalNumber = doctor.PersonalNumber } )"> Delete </a>
+            </td>
+            <td>
+                |
+            </td>
+            <td>
+                <a href="@Url.Action("ShowUpdateDoctorForm", "Doctor", new { doctorPersonalNumber = doctor.PersonalNumber} )"> Update </a>
+            </td>
+        </tr>
+    }
+
+</table>

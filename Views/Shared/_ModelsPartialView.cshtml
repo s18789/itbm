@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<nav>
+    <div class="navi" id="navi" name="navi" style="height: 50px; width: 100%; background: grey; padding: 10px; text-align: center; font: 12px ; font-weight: bold;">
+        <a href="@Url.Action("GetDoctors","Doctor")" style="color: white;">
+            <div class="Doctors" id="Doctors" name="Doctors" style="height: 50px; float: left; width: 20%;"> Doctors </div>
+        </a>
+        <a href="@Url.Action("GetCures","HomeAcess")" style="color: white;">
+            <div class="cures" id="cures" name="cures" style="height: 50px; float:left; width: 20%;"> Cures </div>
+        </a>
+        <a href="@Url.Action("GetPatients","Patient")" style="color: white;">
+            <div class="Patient" id="Patient" name="Patient" style="height: 50px; float:left; width: 20%;"> Patients </div>
+        </a>
+        <a href="@Url.Action("GetPrescriptions","Prescription")" style="color: white;">
+            <div class="Prescriptions" id="Prescriptions" name="Prescriptions" style="height: 50px; float:left; width: 20%;"> Prescriptions </div>
+        </a>
+        <a href="@Url.Action("GetCurePrescriptions","CurePrescription")" style="color: white;">
+            <div class="CurePrescription" id="CurePrescription" name="CurePrescription" style="height: 50px; float:left; width: 20%;"> Cure-Prescription </div>
+        </a>
+    </div>
+</nav>
