@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var personalNumber = ViewData["personalNumber"];
+}
+
+<form asp-controller="Doctor" asp-action="UpdatePatient" >
+    <label for="personalNumber"> Personal Number: </label>
+    <input type="text" id="personalNumber" name="personalNumber" value="@personalNumber" readonly />
+    <br />
+    <br />
+    <label for="firstName" > FirstName: </label>
+    <input type="text" id="firstName" name="lastName" />
+    <br />
+    <br />
+    <label for="lastName"> LastName: </label>
+    <input type="text" id="lastName" name="lastName" />
+    <br />
+    <br />
+    <input type="submit" value="submit" />
+</form>
